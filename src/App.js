@@ -5,13 +5,12 @@ import axios from "axios";
 const App = () => {
 
     const [quote, setQuote] = useState(['...']);
-    const getQuote = async () => {
+    const getQuote = () => {
 
-        const userQuote = await axios.get('http://api.quotable.io/random')
-
-        .then((userQuote) => {
-            console.log(userQuote.data)
-            setQuote(userQuote.data.content);
+        axios.get('http://api.quotable.io/random')
+        .then((res) => {
+            console.log(res.data)
+            setQuote(res.data.content);
 
         }).catch(err => {
             console.log(err)
