@@ -7,7 +7,7 @@ const App = () => {
     const [quote, setQuote] = useState(['...']);
     const getQuote = () => {
 
-        axios.get('http://api.quotable.io/random')
+        axios.get('https://api.quotable.io/random')
         .then((res) => {
             console.log(res.data)
             setQuote(res.data.content);
