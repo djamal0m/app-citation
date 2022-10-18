@@ -21,7 +21,7 @@ const App = () => {
         
         const interval = setInterval(()=>{
             getQuote()
-        }, 5000);
+        }, 8000);
 
         return () => {
             clearInterval(interval)
